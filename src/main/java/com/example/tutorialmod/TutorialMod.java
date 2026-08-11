@@ -1,5 +1,6 @@
 package com.example.tutorialmod;
 
+import com.example.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -22,6 +23,8 @@ public class TutorialMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModItems.registeredModItems();
+//		初始化调用
 	}
 
 	public static Identifier id(String path) {
