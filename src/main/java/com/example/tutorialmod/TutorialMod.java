@@ -1,5 +1,6 @@
 package com.example.tutorialmod;
 
+import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -24,6 +25,7 @@ public class TutorialMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registeredModItems();
+		ModItemGroups.registeredItemGroups();
 //		初始化调用
 	}
 

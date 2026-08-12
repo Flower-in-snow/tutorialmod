@@ -1,10 +1,9 @@
 package com.example.tutorialmod.item;
 
 import com.example.tutorialmod.TutorialMod;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterials;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,10 +18,14 @@ public class ModItems {
 //        上述这样写也可以，但是我们查看Registry类里的register方法，发现register方法可以简化
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
-    public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new SwordItem(ToolMaterials.WOOD, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 20,-1.0F))));
-//  创造新物品
-    public static void registeredModItems(){
-        TutorialMod.LOGGER.info("Registering Items");
+    public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new Item(new Item.Settings()));//  创造新物品
+    public static void addItemtoItemGroups(FabricItemGroupEntries fabricItemGroupEntries){
+        //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
+        fabricItemGroupEntries.add(ICE_SPRAY_WAND);
     }
-//    上面是一段无意义的代码，本质是为了初始化调用
+    public static void registeredModItems(){
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemtoItemGroups);
+        //在 ItemGroupEvents 里，监听 ‘修改 Ingredients 物品栏条目’ 这个事件，并在事件发生时执行 addItemtoItemGroups 这个方法
+        TutorialMod.LOGGER.info("Registering Items");//无意义的代码，方便主程序内调用加载
+    }
 }

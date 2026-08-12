@@ -1,3 +1,4 @@
 {
-  "item.tutorialmod.ice_spray_wand": "Ice Spray Wand"
+  "item.tutorialmod.ice_spray_wand": "Ice Spray Wand",
+  "itemGroup.tutorialmod.tutorial": "Tutorial Group"
 }
