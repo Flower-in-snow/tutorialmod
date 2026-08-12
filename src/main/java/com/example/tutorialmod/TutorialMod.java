@@ -24,8 +24,10 @@ public class TutorialMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
 		ModItems.registeredModItems();
 		ModItemGroups.registeredItemGroups();
+
 //		初始化调用
 	}
 
