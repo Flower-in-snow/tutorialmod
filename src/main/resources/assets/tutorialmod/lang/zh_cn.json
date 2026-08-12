@@ -1,4 +1,5 @@
 {
   "item.tutorialmod.ice_spray_wand": "冰霜法杖",
-  "itemGroup.tutorialmod.tutorial": "教程组"
+  "itemGroup.tutorialmod.tutorial": "教程组",
+  "block.tutorialmod.ice_spray_ore": "冰霜矿石"
 }

@@ -1,6 +1,7 @@
 package com.example.tutorialmod.item;
 
 import com.example.tutorialmod.TutorialMod;
+import com.example.tutorialmod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -21,12 +22,13 @@ public class ModItemGroups {
     }
     public static void registeredItemGroups(){//注册物品栏的方法
         Registry.register(Registries.ITEM_GROUP, TUTORIAL_GROUP, ItemGroup.create(ItemGroup.Row.TOP,7)
-                        //第二个参数有两种写法，可以是key可以是Identifierid
+                        //第二个参数有两种写法，可以是key可以是Identifier id
                 .displayName(Text.translatable("itemGroup.tutorialmod.tutorial"))//这里的key可以在lang文件里定义，随便写
                 .icon(() -> new ItemStack(ModItems.ICE_SPRAY_WAND))//这里是物品栏的图标
                 .entries((displayContext, entries) -> {
                     entries.add(ModItems.ICE_SPRAY_WAND);//这里是物品栏的内容
                     entries.add(Items.DIAMOND);
+                    entries.add(ModBlocks.ICE_SPRAY_ORE);
                 })
                         .build()
                 );
