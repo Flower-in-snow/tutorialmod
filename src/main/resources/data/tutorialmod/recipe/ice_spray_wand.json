@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "tutorialmod:ice_spray_gemstone"
+    },
+    "B": {
+      "item": "tutorialmod:ice_spray_block"
+    },
+    "D": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " B ",
+    "#D#",
+    " D "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:ice_spray_wand"
+  }
+}

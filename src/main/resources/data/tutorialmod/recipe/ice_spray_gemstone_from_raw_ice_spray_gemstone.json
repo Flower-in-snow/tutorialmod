@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "gemstone",
+  "key": {
+    "#": {
+      "item": "tutorialmod:raw_ice_spray_gemstone"
+    }
+  },
+  "pattern": [
+    " # ",
+    "###",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:ice_spray_gemstone"
+  }
+}

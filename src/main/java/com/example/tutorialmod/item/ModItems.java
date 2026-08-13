@@ -20,18 +20,35 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
     public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new Item(new Item.Settings()));//  创造新物品
+    public static final Item RAW_ICE_SPRAY_GEMSTONE = registeredItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
+    public static final Item ICE_SPRAY_GEMSTONE = registeredItems("ice_spray_gemstone", new Item(new Item.Settings()));
 
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
-        fabricItemGroupEntries.add(ICE_SPRAY_WAND);
+        fabricItemGroupEntries.add(ICE_SPRAY_GEMSTONE);
+        fabricItemGroupEntries.add(RAW_ICE_SPRAY_GEMSTONE);
     }
+
     public static void addItemtoNatural(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
         fabricItemGroupEntries.add(ModBlocks.ICE_SPRAY_ORE);
     }
+
+    public static void addItemtoCombat(FabricItemGroupEntries fabricItemGroupEntries){
+        //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
+        fabricItemGroupEntries.add(ICE_SPRAY_WAND);
+    }
+
+    public static void addItemtoBuildingBlocks(FabricItemGroupEntries fabricItemGroupEntries){
+        //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
+        fabricItemGroupEntries.add(ModBlocks.ICE_SPRAY_BLOCK);
+    }
+
     public static void registeredModItems(){
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemtoIngredients);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemtoNatural);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemtoCombat);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemtoBuildingBlocks);
         //在 ItemGroupEvents 里，监听 ‘修改 Ingredients 物品栏条目’ 这个事件，并在事件发生时执行 addItemtoX 这个方法
         TutorialMod.LOGGER.info("Registering Items");//无意义的代码，方便主程序内调用加载
     }

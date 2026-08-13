@@ -24,11 +24,13 @@ public class ModItemGroups {
         Registry.register(Registries.ITEM_GROUP, TUTORIAL_GROUP, ItemGroup.create(ItemGroup.Row.TOP,7)
                         //第二个参数有两种写法，可以是key可以是Identifier id
                 .displayName(Text.translatable("itemGroup.tutorialmod.tutorial"))//这里的key可以在lang文件里定义，随便写
-                .icon(() -> new ItemStack(ModItems.ICE_SPRAY_WAND))//这里是物品栏的图标
+                .icon(() -> new ItemStack(ModItems.RAW_ICE_SPRAY_GEMSTONE))//这里是物品栏的图标
                 .entries((displayContext, entries) -> {
-                    entries.add(ModItems.ICE_SPRAY_WAND);//这里是物品栏的内容
-                    entries.add(Items.DIAMOND);
+                    entries.add(ModItems.RAW_ICE_SPRAY_GEMSTONE);//这里是物品栏的内容
+                    entries.add(ModItems.ICE_SPRAY_GEMSTONE);
                     entries.add(ModBlocks.ICE_SPRAY_ORE);
+                    entries.add(ModItems.ICE_SPRAY_WAND);
+                    entries.add(ModBlocks.ICE_SPRAY_BLOCK);
                 })
                         .build()
                 );

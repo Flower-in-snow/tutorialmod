@@ -1,5 +1,8 @@
 {
   "item.tutorialmod.ice_spray_wand": "Ice Spray Wand",
   "itemGroup.tutorialmod.tutorial": "Tutorial Group",
-  "block.tutorialmod.ice_spray_ore": "Ice Spray Ore"
+  "block.tutorialmod.ice_spray_ore": "Ice Spray Ore",
+  "block.tutorialmod.ice_spray_block": "Ice Spray Block",
+  "item.tutorialmod.raw_ice_spray_gemstone": "Raw Ice Spray Gemstone",
+  "item.tutorialmod.ice_spray_gemstone": "Ice Spray Gemstone"
 }

@@ -11,9 +11,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block ICE_SPRAY_ORE = register("ice_spray_ore", new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASS).strength(4.5f, 6.0f)));
+    public static final Block ICE_SPRAY_ORE = register("ice_spray_ore", new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASS).requiresTool().strength(4.5f, 6.0f)));
+    public static final Block ICE_SPRAY_BLOCK = register("ice_spray_block", new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(3.0f, 3.0f)));
     //调用方法注册
-
+    //下方是注册的两个方法
     public static void registeredBlockItems(String id, Block block){
         Item item = Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), new BlockItem(block, new Item.Settings()));//注册成物品的方法
         if (item instanceof BlockItem) {
