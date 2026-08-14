@@ -18,6 +18,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModBlocks.ICE_SPRAY_BLOCK, "冰霜方块");
         translationBuilder.add(ModBlocks.ICE_SPRAY_ORE, "冰霜矿石");
+        translationBuilder.add(ModItems.ICE_ESSENCE, "冰霜精华");
 
         translationBuilder.add(ModItems.RAW_ICE_SPRAY_GEMSTONE, "原始冰霜宝石");
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "冰霜宝石");

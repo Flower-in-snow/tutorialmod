@@ -18,6 +18,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModBlocks.ICE_SPRAY_BLOCK, "Ice Spray Block");
         translationBuilder.add(ModBlocks.ICE_SPRAY_ORE, "Ice Spray Ore");
+        translationBuilder.add(ModItems.ICE_ESSENCE, "Ice Essence");
 
         translationBuilder.add(ModItems.RAW_ICE_SPRAY_GEMSTONE, "Raw Ice Spray Gemstone");
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "Ice Spray Gemstone");

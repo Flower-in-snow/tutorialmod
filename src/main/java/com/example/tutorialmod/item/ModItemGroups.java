@@ -4,7 +4,6 @@ import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -31,6 +30,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ICE_SPRAY_ORE);
                     entries.add(ModItems.ICE_SPRAY_WAND);
                     entries.add(ModBlocks.ICE_SPRAY_BLOCK);
+                    entries.add(ModItems.ICE_ESSENCE);
                 })
                         .build()
                 );
